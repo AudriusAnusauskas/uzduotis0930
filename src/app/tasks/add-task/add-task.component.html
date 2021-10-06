@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">Pridetinauja Uzduoti</div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Projektas</label>
+            <input type="text" class="form-control" [(ngModel)] = "projectInput" #project>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Aprasymas</label>
+            <input type="text" class="form-control" [(ngModel)] = "descriptionInput" #description>
+        </div>
+        <button class="btn btn-success" [disabled]="projectInput == '' || descriptionInput =='' " (click)="addTask(project, description)" >Prideti</button>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="card mt-3" *ngFor="let user of users">
+    <div class="card-header"> {{user.name}} {{user.surname}} </div>
+    <div class="card-body">
+        <app-user-tasks [tasks]="user.tasks"></app-user-tasks>
+
+    </div>
+
+</div>

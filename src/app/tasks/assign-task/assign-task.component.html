@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-md-6">
+        <select class="form-control" name="user" [(ngModel)]="selectas" #userIndex >
+            <option selected disabled value = "-1" >Pasirinkite darbuotoja</option>
+            <option *ngFor ="let user of users; let i=index" [value]="i"> {{user.name}} {{user.surname}} </option>
+        </select>
+    </div>
+    <div class="col-md-6"><button type="submit" [disabled]="selectas < 0" class="btn btn-success" (click)="assign(userIndex)" >Priskirti uzduoti</button></div>
+</div>
+
